@@ -1,16 +1,17 @@
 $(document).ready(function(){
     //handle on scroll of window
     $(window).scroll(function(){
-        if( $("#images-sec1").isInView()){
-            showScrollMovement("images-sec1",800)
-        } else if( $("#images-sec2").isInView()){
-            showScrollMovement("images-sec2",2*800)
-        }else if( $("#images-sec3").isInView()){
-            showScrollMovement("images-sec3",3*800)
-        }else if( $("#images-sec4").isInView() ){
-            showScrollMovement("images-sec4",4*800)
-        }else{
-
+        if( $("#imagesSec1").isInView()){
+            showScrollMovement("imagesSec1",800)
+        }
+        if( $("#imagesSec2").isInView()){
+            showScrollMovement("imagesSec2",2*800)
+        }
+        if( $("#imagesSec3").isInView()){
+            showScrollMovement("imagesSec3",3*800)
+        }
+        if( $("#imagesSec4").isInView() ){
+            showScrollMovement("imagesSec4",4*800)
         }
     })
     function showScrollMovement(div, height){
