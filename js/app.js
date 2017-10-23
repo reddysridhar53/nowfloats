@@ -18,7 +18,7 @@ $(document).ready(function(){
         var scrollTop = $(window).scrollTop() - height //subtracting the section height from scrolltop
         var scrollPos = (250 - scrollTop) //subtracting the position already set on each image
         console.log("scrollPos : ", scrollPos)
-        if(scrollPos >= -300 && scrollPos <= 250){
+        if(scrollPos >= -300 && scrollPos <= 300){
             var transform = "translate3d(0px," + scrollPos + "px, 0px)"; //setting the transform on each image.
             $("#"+div+" img").css({"-webkit-transform" : transform });
         }
