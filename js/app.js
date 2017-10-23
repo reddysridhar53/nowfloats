@@ -20,7 +20,7 @@ $(document).ready(function(){
         console.log("scrollPos : ", scrollPos)
         if(scrollPos >= -300 && scrollPos <= 300){
             var transform = "translate3d(0px," + scrollPos + "px, 0px)"; //setting the transform on each image.
-            $("#"+div+" img").css({"-webkit-transform" : transform });
+            $("#"+div+" img").css({"-webkit-transform" : transform, "opacity": ( scrollTop < height ? 0 : ( scrollTop > height ? 1 : (scrollTop - height)/800)) });
         }
     }
     $.fn.isInView = function() {
