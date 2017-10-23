@@ -20,22 +20,6 @@ body {
 	-webkit-align-items: center;
 }
 
-.p30 {
-	padding: 2rem;
-}
-
-.p20 {
-	padding: 1.35rem;
-}
-
-.m0 {
-	margin: 0 !important;
-}
-
-.p0 {
-	padding: 0 !important;
-}
-
 .white, #mainHeader .hbox .hcontent {
 	color: #fff;
 }
@@ -71,10 +55,6 @@ body {
 	width: 100%;
 	left: 0;
 	z-index: 100;
-}
-
-.mt60, #mainHeader {
-	margin-top: 4rem;
 }
 
 .bgImg, #mainHeader {
@@ -127,7 +107,6 @@ body {
 	top: -3.5rem;
 	width: 50%;
 	z-index: 1;
-	transform: translate3d(0, 200px, 0);
 }
 
 .leftImg, #mainPage .section:nth-child(2n) .left-img, #mainPage .section:nth-child(2n+1) .right-img {
@@ -135,7 +114,6 @@ body {
 	width: 70%;
 	z-index: 2;
 	bottom: -4.5rem;
-	transform: translate3d(0, 250px, 0);
 }
 
 .nav-menu {
@@ -189,6 +167,7 @@ body {
 	width: 100%;
 	background-image: url("https://s3-ap-southeast-1.amazonaws.com/yourdost/images/banner-img1+(1).png");
 	padding: 0 2rem;
+	margin-top: 4rem;
 }
 
 #mainHeader .hbox {
@@ -204,14 +183,12 @@ body {
 #mainHeader .hbox .mh {
 	font-size: 3rem;
 	margin-bottom: 0rem;
-	transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
 #mainHeader .hbox .sh {
 	font-size: 1.6rem;
 	margin-top: 0.5rem;
 	margin-bottom: 1.5rem;
-	transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
 #mainHeader .hbox .hunderline {
@@ -222,8 +199,8 @@ body {
 
 #mainHeader .hbox .hcontent {
 	margin: 2.5rem 0 0;
+	padding: 0;
 	font-size: 1.4rem;
-	transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
 #mainPage {
@@ -235,7 +212,6 @@ body {
 	margin-top: 3rem;
 	font-size: 3rem;
 	color: #333;
-	transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
 #mainPage #mainContent .txt {
@@ -243,11 +219,14 @@ body {
 	font-size: 1.25rem;
 	width: 65%;
 	color: #333;
-	transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
 #mainPage .section {
 	margin: 10rem 0 9rem;
+}
+
+#mainPage .section:last-child {
+	margin-bottom: 0;
 }
 
 #mainPage .section .image-content {
@@ -256,8 +235,8 @@ body {
 }
 
 #mainPage .section .image-content img {
-	-webkit-transform: translate3d(0px, 250px, 0px);
-	transform: translate3d(0px, 250px, 0px);
+	-webkit-transform: translate3d(0px, 300px, 0px);
+	transform: translate3d(0px, 300px, 0px);
 }
 
 #mainPage .section .content:before {

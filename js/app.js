@@ -1,27 +1,33 @@
 $(document).ready(function(){
     //handle on scroll of window
     $(window).scroll(function(){
+        if( $("#mainContent .txt").isInView() ){
+            //added fadeinup effect for the content
+            if( !$("#mainContent .txt").hasClass("fadeInUp") ) $(".txt").addClass("animated fadeInUp")
+        }
         if( $("#imagesSec1").isInView()){
-            showScrollMovement("imagesSec1",800)
+            showScrollMovement("imagesSec1",700)
         }
         if( $("#imagesSec2").isInView()){
-            showScrollMovement("imagesSec2",2*800)
+            showScrollMovement("imagesSec2",2*700)
         }
         if( $("#imagesSec3").isInView()){
-            showScrollMovement("imagesSec3",3*800)
+            showScrollMovement("imagesSec3",3*700)
         }
         if( $("#imagesSec4").isInView() ){
-            showScrollMovement("imagesSec4",4*800)
+            showScrollMovement("imagesSec4",4*700)
         }
     })
     function showScrollMovement(div, height){
-        var scrollTop = $(window).scrollTop() - height //subtracting the section height from scrolltop
-        var scrollPos = (250 - scrollTop) //subtracting the position already set on each image
-        console.log("scrollPos : ", scrollPos)
+        var scrollTop = $(window).scrollTop() //Get the actual scrollTop;
+        var scrollSection = scrollTop - height //subtracting the section height from scrolltop
+        var scrollPos = 300 - scrollSection //subtracting the position already set on each image
         if(scrollPos >= -300 && scrollPos <= 300){
             var transform = "translate3d(0px," + scrollPos + "px, 0px)"; //setting the transform on each image.
-            $("#"+div+" img").css({"-webkit-transform" : transform, "opacity": ( scrollTop < height ? 0 : ( scrollTop > height ? 1 : (scrollTop - height)/800)) });
+            $("#"+div+" img").css({"-webkit-transform" : transform}).addClass("animated")
         }
+        //added fadeinup effect for the content inside the box
+        if( !$("#"+div+" .sub-content").hasClass("fadeInUp") ) $("#"+div+" .sub-content").addClass("animated fadeInUp")
     }
     $.fn.isInView = function() {
         //finding if the sectiong that has been scrolled is in the window or not.
