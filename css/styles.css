@@ -20,7 +20,7 @@ body {
 	-webkit-align-items: center;
 }
 
-.white, #mainHeader .hbox .hcontent {
+.white, #mainHeader .hbox .banner-header, #mainHeader .hbox .hcontent, #mainPage .section .content span {
 	color: #fff;
 }
 
@@ -28,15 +28,15 @@ body {
 	color: #000;
 }
 
-.ttu {
+.ttu, #mainHeader .hbox .banner-header, #mainPage #mainContent .header-txt, #mainPage .section .content span {
 	text-transform: uppercase;
 }
 
-.fw800 {
+.fw800, #mainHeader .hbox .banner-header, #mainPage #mainContent .header-txt span, #mainPage .section .content span:nth-child(2) {
 	font-weight: bold;
 }
 
-.fw300, #mainHeader .hbox .hcontent, #mainPage #mainContent .txt {
+.fw300, #mainHeader .hbox .banner-header.sub, #mainHeader .hbox .hcontent, #mainPage #mainContent .header-txt, #mainPage #mainContent .sub-txt, #mainPage .section .content span:first-child {
 	font-weight: 300;
 }
 
@@ -180,12 +180,11 @@ body {
 	border-radius: 0rem;
 }
 
-#mainHeader .hbox .mh {
+#mainHeader .hbox .banner-header {
 	font-size: 3rem;
-	margin-bottom: 0rem;
 }
 
-#mainHeader .hbox .sh {
+#mainHeader .hbox .banner-header.sub {
 	font-size: 1.6rem;
 	margin-top: 0.5rem;
 	margin-bottom: 1.5rem;
@@ -208,17 +207,19 @@ body {
 	text-align: center;
 }
 
-#mainPage #mainContent .head {
-	margin-top: 3rem;
-	font-size: 3rem;
+#mainPage #mainContent {
 	color: #333;
 }
 
-#mainPage #mainContent .txt {
+#mainPage #mainContent .header-txt {
+	margin-top: 3rem;
+	font-size: 3rem;
+}
+
+#mainPage #mainContent .sub-txt {
 	margin: 3rem auto;
 	font-size: 1.25rem;
 	width: 65%;
-	color: #333;
 }
 
 #mainPage .section {

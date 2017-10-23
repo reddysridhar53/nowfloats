@@ -1,9 +1,9 @@
 $(document).ready(function(){
     //handle on scroll of window
     $(window).scroll(function(){
-        if( $("#mainContent .txt").isInView() ){
+        if( $("#mainContent .sub-txt").isInView() ){
             //added fadeinup effect for the content
-            if( !$("#mainContent .txt").hasClass("fadeInUp") ) $(".txt").addClass("animated fadeInUp")
+            if( !$("#mainContent .sub-txt").hasClass("fadeInUp") ) $(".sub-txt").addClass("animated fadeInUp")
         }
         if( $("#imagesSec1").isInView()){
             showScrollMovement("imagesSec1",700)
