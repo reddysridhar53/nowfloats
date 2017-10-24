@@ -14,6 +14,7 @@ $(document).ready(function(){
         }
     })
     function showScrollMovement(div, height){
+        
         var scrollTop = $(window).scrollTop() - height
         var scrollPos = (250 - scrollTop)
         console.log("scrollPos : ", scrollPos)
