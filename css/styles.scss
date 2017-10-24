@@ -17,21 +17,6 @@ body{
     align-items: center;
     -webkit-align-items : center;
 }
-.p30{
-    padding: 2rem;
-}
-.p90_40{
-    padding: 6rem 2.65rem;
-}
-.p20{
-    padding: 1.35rem;
-}
-.m0{
-    margin: 0 !important;
-}
-.p0{
-    padding: 0 !important;
-}
 .white{
     color: #fff;
 }
@@ -60,9 +45,6 @@ body{
     width: 100%;
     left: 0;
     z-index: 100;
-}
-.mt60{
-    margin-top: 4rem;
 }
 .bgImg{
     background-position: center center;
@@ -108,14 +90,12 @@ body{
     top: -3.5rem;
     width: 50%;
     z-index: 1;
-    transform: translate3d(0,200px,0);
 }
 .leftImg{
     position: relative;
     width: 70%;
     z-index: 2;
     bottom: -4.5rem;
-    transform: translate3d(0,250px,0);
 }
 .nav-menu{
     position: relative;
@@ -156,30 +136,32 @@ body{
     text-align: center;
     line-height: 4rem;
 }
-#main-header{
+#mainHeader{
     width: 100%;
     background-image: url("https://s3-ap-southeast-1.amazonaws.com/yourdost/images/banner-img1+(1).png");
     @extend .bgImg;
     @extend .flex-valign;
     padding: 0 2rem;
-    @extend .mt60;
+    margin-top: 4rem;
     .hbox{
         width: 100%;
+        padding:6rem 2.65rem;
         min-height: calc(100vh - 50px);
         min-height: -webkit-calc(100vh - 50px);
         border-left:1px solid orange;
         border-right:1px solid orange;
         border-radius: 0rem;
-        .mh{
+        .banner-header{
+            @extend .ttu;
+            @extend .white;
+            @extend .fw800;
             font-size: 3rem;
-            margin-bottom: 0rem;
-            transform: matrix(1, 0, 0, 1, 0, 0);
-        }
-        .sh{
-            font-size: 1.6rem;
-            margin-top: 0.5rem;
-            margin-bottom: 1.5rem;
-            transform: matrix(1, 0, 0, 1, 0, 0);
+            &.sub{
+                font-size: 1.6rem;
+                margin-top: 0.5rem;
+                margin-bottom: 1.5rem;
+                @extend .fw300;
+            }
         }
         .hunderline{
             width: 6rem;
@@ -188,39 +170,48 @@ body{
         }
         .hcontent{
             margin: 2.5rem 0 0;
+            padding: 0;
             font-size: 1.4rem;
             @extend .fw300;
             @extend .white;
-            transform: matrix(1, 0, 0, 1, 0, 0);
         }
     }
 }
-#main-page{
+#mainPage{
     padding: 1rem;
     text-align: center;
-    #main-content{
-        .head{
+    #mainContent{
+        color: #333;
+        .header-txt{
             margin-top: 3rem;
             font-size: 3rem;
-            color: #333;
-            transform: matrix(1, 0, 0, 1, 0, 0);
+            @extend .ttu;
+            @extend .fw300;
+            span{
+                @extend .fw800;
+            }
         }
-        .txt{
+        .sub-txt{
             margin: 3rem auto;
             font-size: 1.25rem;
-            @extend .fw300;
             width:65%;
-            color: #333;
-            transform: matrix(1, 0, 0, 1, 0, 0);
+            @extend .fw300;
         }
     }
     .section{
         margin:10rem 0 9rem;
+        &:last-child{
+            margin-bottom: 0;
+        }
         .image-content{
             position: relative;
             width: 100%;
             .sub-content{
                 @extend .box-content;
+            }
+            img{
+                -webkit-transform: translate3d(0px, 300px, 0px);
+                transform: translate3d(0px, 300px, 0px);
             }
         }
         .content{
@@ -232,6 +223,16 @@ body{
                 left:-100px;
                 top: 0px;
                 background: #333;
+            }
+            span{
+                @extend .ttu;
+                @extend .white;
+                &:first-child{
+                    @extend .fw300;
+                }
+                &:nth-child(2){
+                    @extend .fw800;
+                }
             }
             .eblackBox{
                 @extend .extraBox;

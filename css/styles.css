@@ -13,34 +13,14 @@ body {
 	font-family: "Open Sans",sans-serif;
 }
 
-.flex-valign, #main-header {
+.flex-valign, #mainHeader {
 	display: flex;
 	display: -webkit-flex;
 	align-items: center;
 	-webkit-align-items: center;
 }
 
-.p30 {
-	padding: 2rem;
-}
-
-.p90_40 {
-	padding: 6rem 2.65rem;
-}
-
-.p20 {
-	padding: 1.35rem;
-}
-
-.m0 {
-	margin: 0 !important;
-}
-
-.p0 {
-	padding: 0 !important;
-}
-
-.white, #main-header .hbox .hcontent {
+.white, #mainHeader .hbox .banner-header, #mainHeader .hbox .hcontent, #mainPage .section .content span {
 	color: #fff;
 }
 
@@ -48,15 +28,15 @@ body {
 	color: #000;
 }
 
-.ttu {
+.ttu, #mainHeader .hbox .banner-header, #mainPage #mainContent .header-txt, #mainPage .section .content span {
 	text-transform: uppercase;
 }
 
-.fw800 {
+.fw800, #mainHeader .hbox .banner-header, #mainPage #mainContent .header-txt span, #mainPage .section .content span:nth-child(2) {
 	font-weight: bold;
 }
 
-.fw300, #main-header .hbox .hcontent, #main-page #main-content .txt {
+.fw300, #mainHeader .hbox .banner-header.sub, #mainHeader .hbox .hcontent, #mainPage #mainContent .header-txt, #mainPage #mainContent .sub-txt, #mainPage .section .content span:first-child {
 	font-weight: 300;
 }
 
@@ -77,17 +57,13 @@ body {
 	z-index: 100;
 }
 
-.mt60, #main-header {
-	margin-top: 4rem;
-}
-
-.bgImg, #main-header {
+.bgImg, #mainHeader {
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
-.black-box, #main-page .section .content {
+.black-box, #mainPage .section .content {
 	height: 60px;
 	display: inline-block;
 	line-height: 4rem;
@@ -103,7 +79,7 @@ body {
 	width: 100%;
 }
 
-.extraBox, #main-page .section .content .eblackBox {
+.extraBox, #mainPage .section .content .eblackBox {
 	position: absolute;
 	display: inline-block;
 	width: 80px;
@@ -112,7 +88,7 @@ body {
 	background: #333;
 }
 
-.box-content, #main-page .section .image-content .sub-content, #main-page .section:nth-child(2n+1) .sub-content {
+.box-content, #mainPage .section .image-content .sub-content, #mainPage .section:nth-child(2n+1) .sub-content {
 	text-align: left;
 	color: #333;
 	margin: 2rem 0;
@@ -126,22 +102,18 @@ body {
 	background: #fff;
 }
 
-.rightImg, #main-page .section:nth-child(2n) .right-img, #main-page .section:nth-child(2n+1) .left-img {
+.rightImg, #mainPage .section:nth-child(2n) .right-img, #mainPage .section:nth-child(2n+1) .left-img {
 	position: absolute;
 	top: -3.5rem;
 	width: 50%;
 	z-index: 1;
-	max-height: 520px;
-	transform: translate3d(0,200px,0);
 }
 
-.leftImg, #main-page .section:nth-child(2n) .left-img, #main-page .section:nth-child(2n+1) .right-img {
+.leftImg, #mainPage .section:nth-child(2n) .left-img, #mainPage .section:nth-child(2n+1) .right-img {
 	position: relative;
 	width: 70%;
 	z-index: 2;
 	bottom: -4.5rem;
-	max-height: 320px;
-	transform: translate3d(0,250px,0);
 }
 
 .nav-menu {
@@ -191,14 +163,16 @@ body {
 	line-height: 4rem;
 }
 
-#main-header {
+#mainHeader {
 	width: 100%;
 	background-image: url("https://s3-ap-southeast-1.amazonaws.com/yourdost/images/banner-img1+(1).png");
 	padding: 0 2rem;
+	margin-top: 4rem;
 }
 
-#main-header .hbox {
+#mainHeader .hbox {
 	width: 100%;
+	padding: 6rem 2.65rem;
 	min-height: calc(100vh - 50px);
 	min-height: -webkit-calc(100vh - 50px);
 	border-left: 1px solid orange;
@@ -206,61 +180,67 @@ body {
 	border-radius: 0rem;
 }
 
-#main-header .hbox .mh {
+#mainHeader .hbox .banner-header {
 	font-size: 3rem;
-	margin-bottom: 0rem;
-	transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
-#main-header .hbox .sh {
+#mainHeader .hbox .banner-header.sub {
 	font-size: 1.6rem;
 	margin-top: 0.5rem;
 	margin-bottom: 1.5rem;
-	transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
-#main-header .hbox .hunderline {
+#mainHeader .hbox .hunderline {
 	width: 6rem;
 	height: 0.3rem;
 	background: #fff;
 }
 
-#main-header .hbox .hcontent {
+#mainHeader .hbox .hcontent {
 	margin: 2.5rem 0 0;
+	padding: 0;
 	font-size: 1.4rem;
-	transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
-#main-page {
+#mainPage {
 	padding: 1rem;
 	text-align: center;
 }
 
-#main-page #main-content .head {
-	margin-top: 3rem;
-	font-size: 3rem;
+#mainPage #mainContent {
 	color: #333;
-	transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
-#main-page #main-content .txt {
+#mainPage #mainContent .header-txt {
+	margin-top: 3rem;
+	font-size: 3rem;
+}
+
+#mainPage #mainContent .sub-txt {
 	margin: 3rem auto;
 	font-size: 1.25rem;
 	width: 65%;
-	color: #333;
-	transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
-#main-page .section {
+#mainPage .section {
 	margin: 10rem 0 9rem;
 }
 
-#main-page .section .image-content {
+#mainPage .section:last-child {
+	margin-bottom: 0;
+}
+
+#mainPage .section .image-content {
 	position: relative;
 	width: 100%;
 }
 
-#main-page .section .content:before {
+#mainPage .section .image-content img {
+	-webkit-transform: translate3d(0px, 300px, 0px);
+	transform: translate3d(0px, 300px, 0px);
+}
+
+#mainPage .section .content:before {
 	position: absolute;
 	height: 60px;
 	width: 100px;
@@ -269,41 +249,45 @@ body {
 	background: #333;
 }
 
-#main-page .section:nth-child(2n) {
+#mainPage .section:nth-child(2n) {
 	text-align: left;
 }
 
-#main-page .section:nth-child(2n) .content .eblackBox {
+#mainPage .section:nth-child(2n) .content .eblackBox {
 	left: -80px;
 }
 
-#main-page .section:nth-child(2n) .left-img {
+#mainPage .section:nth-child(2n) .left-img {
 	left: -5.5rem;
+	max-height: 320px;
 }
 
-#main-page .section:nth-child(2n) .right-img {
+#mainPage .section:nth-child(2n) .right-img {
 	right: -3.5rem;
+	max-height: 520px;
 }
 
-#main-page .section:nth-child(2n+1) {
+#mainPage .section:nth-child(2n+1) {
 	text-align: right;
 }
 
-#main-page .section:nth-child(2n+1) .content {
+#mainPage .section:nth-child(2n+1) .content {
 	text-align: left;
 	width: 100%;
 	background: #165570;
 }
 
-#main-page .section:nth-child(2n+1) .content .eblackBox {
+#mainPage .section:nth-child(2n+1) .content .eblackBox {
 	background: #165570;
 	right: -80px;
 }
 
-#main-page .section:nth-child(2n+1) .left-img {
+#mainPage .section:nth-child(2n+1) .left-img {
 	left: -3.5rem;
+	max-height: 520px;
 }
 
-#main-page .section:nth-child(2n+1) .right-img {
+#mainPage .section:nth-child(2n+1) .right-img {
 	right: -5.5rem;
+	max-height: 320px;
 }
